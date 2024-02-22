@@ -439,7 +439,7 @@ PrefabInstance:
     - target: {fileID: 7452936492954952098, guid: 90a24f5681ebfd0409793d61eb6ec059,
         type: 3}
       propertyPath: m_Name
-      value: TrainDepartureSound
+      value: SoundAbnormal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

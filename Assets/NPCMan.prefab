@@ -334,8 +334,9 @@ GameObject:
   - component: {fileID: 2765738469270516696}
   - component: {fileID: 2608613300600753714}
   - component: {fileID: 8890543426865867811}
+  - component: {fileID: 6481412282692141191}
   m_Layer: 0
-  m_Name: NPC_Man_Walking
+  m_Name: NPCMan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -349,15 +350,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2458858021249968863}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 12, y: 3, z: -130}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5227399924183707278}
   - {fileID: 6365286642886097268}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!95 &2608613300600753714
 Animator:
   serializedVersion: 5
@@ -386,11 +387,31 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2458858021249968863}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54f141628068b9b4493f69f797f003b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6481412282692141191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2458858021249968863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 541a18115a3004d4e8d7a10f28dea8f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetsTransform:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  moveSpeed: 10
 --- !u!1 &2752672716080226024
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,8 +4,8 @@ public class Player : MonoBehaviour
 {
     private GameObject hitObject;
     public bool hasIncursion,hasPassed,hasBack,hasReached;
-    public Vector3 stairGeneratePosition, mainAndCornerGeneratePosition, GeneratePosition;
-    public Vector3 stairGenerateRotation, mainAndCornerGenerateRotation, GenerateRotation;
+    public Vector3 stairGeneratePosition, mainAndCornerGeneratePosition, mainGeneratePosition, cornerGeneratePosition, goalGeneratePosition;
+    public Vector3 stairGenerateRotation, mainAndCornerGenerateRotation, mainGenerateRotation, cornerGenerateRotation, goalGenerateRotation;
     
     void Update()
     {

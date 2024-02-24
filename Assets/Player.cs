@@ -18,8 +18,8 @@ public class Player : MonoBehaviour
             hitObject = hit.collider.gameObject;
             if(hitObject.CompareTag("Incursion"))
             {
-                //Debug.Log("侵入");
-                hasIncursion = hitObject.GetComponent<IPassJudgement>().JudgePass();
+                //Debug.Log("侵入");hasIncursion = hitObject.GetComponent<IPassJudgement>().JudgePass();
+                
                 mainAndCornerGeneratePosition = hitObject.GetComponent<IPassJudgement>().ReturnGeneratePosition();
                 mainAndCornerGenerateRotation = hitObject.GetComponent<IPassJudgement>().ReturnGenerateRotation();
                 hitObject.SetActive(false);

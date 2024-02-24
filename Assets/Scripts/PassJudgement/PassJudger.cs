@@ -20,7 +20,7 @@ public class PassJudger : MonoBehaviour, IPassJudgement
 
     Vector3 IPassJudgement.ReturnGenerateRotation()
     {        
-        generateRotation = new Vector3(-90f, -90f, 90f);
+        generateRotation = this.transform.rotation.eulerAngles + (new Vector3(-89.98f, 0f, 0f) - new Vector3(0f, -90f, 0f));
         return generateRotation;
     }
 }

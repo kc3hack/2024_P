@@ -20,7 +20,7 @@ public class IncursionJudger : MonoBehaviour, IPassJudgement
 
     Vector3 IPassJudgement.ReturnGenerateRotation()
     {        
-        generateRotation = new Vector3(0f, 0f, 0f);
+        generateRotation = this.transform.rotation.eulerAngles + (new Vector3(0f, 0f, 0f) - new Vector3(-90f, 180f, 0f));
         return generateRotation;
     }
 }

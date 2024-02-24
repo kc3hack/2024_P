@@ -14,8 +14,8 @@ public class AbnImage : MonoBehaviour
     */
 
     public bool isAbnormal = true;
-    public SpriteRenderer NormalSprite;
-    public SpriteRenderer AbnormalSprite;
+    public GameObject NormalPoster;
+    public GameObject AbnormalPoster;
 
     void Start() { }
 
@@ -23,13 +23,13 @@ public class AbnImage : MonoBehaviour
     {
         if (isAbnormal)
         {
-            NormalSprite.enabled = false;
-            AbnormalSprite.enabled = true;
+            NormalPoster.SetActive(false);
+            AbnormalPoster.SetActive(true);
         }
         else
         {
-            NormalSprite.enabled = true;
-            AbnormalSprite.enabled = false;
+            NormalPoster.SetActive(true);
+            AbnormalPoster.SetActive(false);
         }
     }
 

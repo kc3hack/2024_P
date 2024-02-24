@@ -5,6 +5,7 @@ using UnityEngine;
 public class BackJudger : MonoBehaviour, IPassJudgement
 {
     private Vector3 generatePosition;
+    private Vector3 generateRotation;
 
     bool IPassJudgement.JudgePass()
     {
@@ -15,5 +16,11 @@ public class BackJudger : MonoBehaviour, IPassJudgement
     {
         //generatePosition = this.transform.position + new Vector3(判定オブジェクトと生成ポジションの差);
         return generatePosition;
+    }
+
+    Vector3 IPassJudgement.ReturnGenerateRotation()
+    {        
+        //generateRotation = new Vector3(-90f, -90f, 90f);
+        return generateRotation;
     }
 }

@@ -35,11 +35,13 @@ public class GameManager : MonoBehaviour
     {
         if(player.hasIncursion)
         {
-            
+            generatedWorldList.Add(worldGenerater.GenerateWorld(1, player.mainAndCornerGeneratePosition, player.mainAndCornerGenerateRotation));
+            player.hasIncursion = false;
         }
         if(player.hasPassed)
         {
-            
+            generatedWorldList.Add(worldGenerater.GenerateWorld(0, player.stairGeneratePosition, player.stairGenerateRotation));
+            player.hasPassed = false;
         }
         if(player.hasBack)
         {

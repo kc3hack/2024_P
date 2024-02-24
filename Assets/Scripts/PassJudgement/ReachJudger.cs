@@ -14,4 +14,10 @@ public class ReachJudger : MonoBehaviour, IPassJudgement
         Debug.Log("ゴールに到達しました");
         return Vector3.zero;
     }
+
+    Vector3 IPassJudgement.ReturnGenerateRotation()
+    {        
+        Debug.Log("ゴールに到達しました");
+        return Vector3.zero;
+    }
 }

@@ -4,7 +4,8 @@ public class Player : MonoBehaviour
 {
     private GameObject hitObject;
     public bool hasIncursion,hasPassed,hasBack,hasReached;
-    public Vector3 startGeneratePosition, cornerGeneratePosition, stairGeneratePosition;
+    public Vector3 stairGeneratePosition, mainAndCornerGeneratePosition, GeneratePosition;
+    public Vector3 stairGenerateRotation, mainAndCornerGenerateRotation, GenerateRotation;
     
     void Update()
     {
@@ -19,11 +20,17 @@ public class Player : MonoBehaviour
             {
                 //Debug.Log("侵入");
                 hasIncursion = hitObject.GetComponent<IPassJudgement>().JudgePass();
+                mainAndCornerGeneratePosition = hitObject.GetComponent<IPassJudgement>().ReturnGeneratePosition();
+                mainAndCornerGenerateRotation = hitObject.GetComponent<IPassJudgement>().ReturnGenerateRotation();
+                hitObject.SetActive(false);
             }
             else if(hitObject.CompareTag("Pass"))
             {
                 //Debug.Log("通過");
                 hasPassed = hitObject.GetComponent<IPassJudgement>().JudgePass();
+                stairGeneratePosition = hitObject.GetComponent<IPassJudgement>().ReturnGeneratePosition();
+                stairGenerateRotation = hitObject.GetComponent<IPassJudgement>().ReturnGenerateRotation();
+                hitObject.SetActive(false);
             }
             else if(hitObject.CompareTag("Back"))
             {

@@ -21,14 +21,17 @@ public class Player : MonoBehaviour
             }
             else if(hitObject.CompareTag("Pass"))
             {
+                Debug.Log("通過");
                 hasPassed = hitObject.GetComponent<IPassJudgement>().JudgePass();
             }
             else if(hitObject.CompareTag("Back"))
             {
+                Debug.Log("引き返し");
                 hasBack = hitObject.GetComponent<IPassJudgement>().JudgePass();
             }
             else if(hitObject.CompareTag("Reach"))
             {
+                Debug.Log("ゴール");
                 hasReached = hitObject.GetComponent<IPassJudgement>().JudgePass();
             }
         }

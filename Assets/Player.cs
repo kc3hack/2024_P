@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
             }
             else if(hitObject.CompareTag("Pass"))
             {
-                Debug.Log("通過");
+                //Debug.Log("通過");
                 hasPassed = hitObject.GetComponent<IPassJudgement>().JudgePass();
             }
             else if(hitObject.CompareTag("Back"))

@@ -3,7 +3,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private GameObject hitObject;
-    private bool hasIncursion,hasPassed,hasBack,hasReached;
+    public bool hasIncursion,hasPassed,hasBack,hasReached;
+    public Vector3 startGeneratePosition, cornerGeneratePosition, stairGeneratePosition;
     
     void Update()
     {
@@ -26,12 +27,12 @@ public class Player : MonoBehaviour
             }
             else if(hitObject.CompareTag("Back"))
             {
-                Debug.Log("引き返し");
+                //Debug.Log("引き返し");
                 hasBack = hitObject.GetComponent<IPassJudgement>().JudgePass();
             }
             else if(hitObject.CompareTag("Reach"))
             {
-                Debug.Log("ゴール");
+                //Debug.Log("ゴール");
                 hasReached = hitObject.GetComponent<IPassJudgement>().JudgePass();
             }
         }

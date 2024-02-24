@@ -13,7 +13,7 @@ public class IncursionJudger : MonoBehaviour, IPassJudgement
 
     Vector3 IPassJudgement.ReturnGeneratePosition()
     {
-        //generatePosition = this.transform.position + new Vector3(判定オブジェクトと生成ポジションの差);
+        generatePosition = this.transform.position + (new Vector3(-118.3f, 7.63f, -159.51f) - this.transform.position);
         return generatePosition;
     }
 }

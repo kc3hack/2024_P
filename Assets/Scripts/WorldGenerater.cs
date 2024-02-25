@@ -15,7 +15,7 @@ public class WorldGenerater : MonoBehaviour
 
    public GameObject GenerateWorld(int elementNumber, Vector3 generatePosition, Vector3 generateRotation)
    {
-        Instantiate(worldPrefabs[elementNumber], generatePosition, Quaternion.Euler(generateRotation));
+        Instantiate(worldPrefabs[elementNumber], generatePosition, Quaternion.Euler(worldPrefabs[elementNumber].transform.rotation.eulerAngles + generateRotation));
 
         //異変生成のメソッド(worldPrefabs[elementNumnber]);
         return worldPrefabs[elementNumber];

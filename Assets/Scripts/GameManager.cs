@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject[] initialWorlds = new GameObject[3];
 
     [SerializeField] private GameObject playerObj;
-    [SerializeField] private GameObject GamaManeger;
+    [SerializeField] private GameObject GameManeger;
     private Player player;
 
     [SerializeField] private GameObject worldGeneraterObj;
@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     {
         player = playerObj.GetComponent<Player>();
         worldGenerater = worldGeneraterObj.GetComponent<WorldGenerater>();
-        abnormalCreationController = GamaManeger.GetComponent<AbnormalCreationController>();
+        abnormalCreationController = GameManeger.GetComponent<AbnormalCreationController>();
     }
 
     private void Start()

@@ -35,7 +35,7 @@
 
 
 ## 使用技術
-Unity,C#,Blender,MIXIAMO
+Unity,C#,Blender,MIXAMO
 <!-- 使用技術を入力してください -->
 
 

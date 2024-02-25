@@ -1,7 +1,9 @@
-<img width="480" alt="サムネ" src="https://github.com/kc3hack/2024_P/assets/89783904/3682d77f-2fcb-434f-b6af-f5bf498809a0"># 八重洲出口 
+# 八重洲出口 
 <!-- プロダクト名に変更してください -->
 
-![八重洲出口]([https://kc3.me/cms/wp-content/uploads/2023/11/2b1b6d9083182c0ce0aeb60000b4d7a7](https://github.com/kc3hack/2024_P/assets/89783904/f0b58ed2-a440-4fb1-8eaf-9ef3db732ff6.png)
+<img width="1280" alt="サムネ" src="https://github.com/kc3hack/2024_P/assets/89783904/3682d77f-2fcb-434f-b6af-f5bf498809a0">
+<!-- プロダクト名に変更してください -->
+
 <!-- プロダクト名・イメージ画像を差し変えてください -->
 
 ## チーム名

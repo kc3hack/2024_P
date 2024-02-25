@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject worldGeneraterObj;
     private WorldGenerater worldGenerater;
     private AbnormalCreationController abnormalCreationController;
+
+    private int consecutiveNumberOfCorrectAnswers = 0;
     
     private void Awake()
     {
@@ -27,6 +29,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        worldGenerater.GenerateInitialWorld(initialWorlds[0]);
+        generatedWorldList.Add(initialWorlds[0]);
         for (int i = 0; i < 3 ; i++)
         {
             worldGenerater.GenerateInitialWorld(initialWorlds[i]);
@@ -38,11 +42,10 @@ public class GameManager : MonoBehaviour
     {
         if(player.hasIncursion)
         {
-            for(int i = 0; i < 2; i++){
-                GameObject erasedObject = generatedWorldList[0];
-                generatedWorldList.RemoveAt(0);
-                Destroy(erasedObject);
-            }
+            GameObject erasedObject = generatedWorldList[0];
+            generatedWorldList.RemoveAt(0);
+            Destroy(erasedObject);
+
             GameObject gameObject = worldGenerater.GenerateWorld(1, player.mainAndCornerGeneratePosition, player.mainAndCornerGenerateRotation);
             generatedWorldList.Add(gameObject);
             abnormalCreationController = new AbnormalCreationController(gameObject);
@@ -51,13 +54,20 @@ public class GameManager : MonoBehaviour
         }
         if(player.hasPassed)
         {
+            GameObject erasedObject = generatedWorldList[0];
+            generatedWorldList.RemoveAt(0);
+            Destroy(erasedObject);
+
             generatedWorldList.Add(worldGenerater.GenerateWorld(0, player.stairGeneratePosition, player.stairGenerateRotation));
             player.hasPassed = false;
         }
         if(player.hasBack)
         {
-            generatedWorldList.Add(worldGenerater.GenerateWorld(3,player.stairGeneratePosition,player.stairGenerateRotation));
-            generatedWorldList.Add(worldGenerater.GenerateWorld(0,player.stairGeneratePosition,player.stairGenerateRotation));            
+            GameObject erasedObject = generatedWorldList[0];
+            generatedWorldList.RemoveAt(0);
+            Destroy(erasedObject);
+
+            generatedWorldList.Add(worldGenerater.GenerateWorld(6,player.stairGeneratePosition,player.stairGenerateRotation));        
             player.hasBack = false;
         }
         if(player.hasReached)

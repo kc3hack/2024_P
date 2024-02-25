@@ -3,15 +3,20 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - CinemachineTarget
+  - Incursion
+  - Pass
+  - Back
+  - Reach
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Volume
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
